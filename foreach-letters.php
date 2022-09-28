@@ -1,6 +1,5 @@
 <?php
-$arr = range('A','Y');
-foreach ($arr as $a) {
+foreach (range('A','Y') as $a) {
     echo "$a ";
     echo "| ";
 }
