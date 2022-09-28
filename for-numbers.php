@@ -1,13 +1,13 @@
 <?php
-$check = 0;
-for($nbr = 1; $nbr <= 96; $nbr++) {
-    for ($i = 2; $i < $nbr/2; $i++) {
-        if ($nbr % $i == 0) $check++;
-        $i++;
+function isPrime($nbr)
+{
+    if ($nbr == 1) return false;
+    for ($i = 2; $i <= $nbr / 2; $i++) {
+        if ($nbr % $i == 0) return false;
     }
-    if ($check = 0 or $nbr != 1) {
-        echo "$nbr, ";
-    }
-    $nbr++;
+    return true;
 }
-echo 97;
+for ($i = 2; $i <= 96; ++$i) {
+    if (isPrime($i)) echo "$i, ";
+}
+echo "97";
