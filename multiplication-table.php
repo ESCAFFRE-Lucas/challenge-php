@@ -1,8 +1,7 @@
 <?php
-$nine = 9;
 $index = 1;
 while ($index != 10) {
-    $stock = $index * $nine;
+    $stock = $index * 9;
     $index++;
     echo "$stock\n";
 }
