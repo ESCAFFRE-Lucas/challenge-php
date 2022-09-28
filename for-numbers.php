@@ -1,20 +1,13 @@
 <?php
-function checkNumberIsPrime($nbr)
-{
-    if ($nbr == 0 or $nbr == 1)
-        return 0;
-    for ($i = 2; $i <= $nbr/2; $i++)
-    {
-        if ($nbr % $i == 0)
-            return 0;
+$check = 0;
+for($nbr = 1; $nbr <= 96; $nbr++) {
+    for ($i = 2; $i < $nbr/2; $i++) {
+        if ($nbr % $i == 0) $check++;
+        $i++;
     }
-    return 1;
-}
-for($nbr = 1; $nbr <= 100; $nbr++) {
-    $check = checkNumberIsPrime($nbr);
-    if ($check == 1 and $nbr != 97) {
+    if ($check = 0 or $nbr != 1) {
         echo "$nbr, ";
-    } elseif ($check == 1 and $nbr == 97) {
-        echo $nbr;
     }
+    $nbr++;
 }
+echo 97;
