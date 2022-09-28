@@ -1,57 +1,43 @@
 <?php
-$month = 0;
-$nameOfMonth = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+$month = date('m');
+$nameOfMonth = "";
 switch ($month) {
-    case 0:
-        echo "We are in the month of $nameOfMonth[$month]";
-        $month++;
-        break;
     case 1:
-        echo "We are in the month of $nameOfMonth[$month]";
-        $month++;
+        $nameOfMonth = "January";
         break;
     case 2:
-        echo "We are in the month of $nameOfMonth[$month]";
-        $month++;
+        $nameOfMonth = "February";
         break;
     case 3:
-        echo "We are in the month of $nameOfMonth[$month]";
-        $month++;
+        $nameOfMonth = "March";
         break;
     case 4:
-        echo "We are in the month of $nameOfMonth[$month]";
-        $month++;
+        $nameOfMonth = "April";
         break;
     case 5:
-        echo "We are in the month of $nameOfMonth[$month]";
-        $month++;
+        $nameOfMonth = "May";
         break;
     case 6:
-        echo "We are in the month of $nameOfMonth[$month]";
-        $month++;
+        $nameOfMonth = "June";
         break;
     case 7:
-        echo "We are in the month of $nameOfMonth[$month]";
-        $month++;
+        $nameOfMonth = "July";
         break;
     case 8:
-        echo "We are in the month of $nameOfMonth[$month]";
-        $month++;
+        $nameOfMonth = "August";
         break;
     case 9:
-        echo "We are in the month of $nameOfMonth[$month]";
-        $month++;
+        $nameOfMonth = "September";
         break;
     case 10:
-        echo "We are in the month of $nameOfMonth[$month]";
-        $month++;
+        $nameOfMonth = "October";
         break;
     case 11:
-        echo "We are in the month of $nameOfMonth[$month]";
-        $month++;
+        $nameOfMonth = "November";
         break;
     case 12:
-        echo "We are in the month of $nameOfMonth[$month]";
-        $month++;
+        $nameOfMonth = "December";
         break;
 }
+echo "We are in the month of $nameOfMonth";
+
