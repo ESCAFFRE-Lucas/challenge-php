@@ -1,18 +1,20 @@
 <?php
-function getFloor(int $currentFloor, int|null $requestedFloor, array $listOfButton): ?int {
+function getFloor(int $currentFloor, int|null $requestedFloor, array $listOfButton): ?int
+{
     if ($requestedFloor == null and count($listOfButton) == 0) {
         return null;
-    }
-    if (count($listOfButton) > 1 and $requestedFloor != null) {
+    } elseif (count($listOfButton) > 1 and $requestedFloor != null) {
         return end($listOfButton);
-    }
-    if (count($listOfButton) == 0) {
+    } elseif (count($listOfButton) == 1) {
+        return $currentFloor;
+    } elseif (count($listOfButton) == 0) {
         return $requestedFloor;
     }
     return $listOfButton[0];
 }
 
-function getDirection(int $currentFloor, int|null $requestedFloor, array $listOfButton): ?int {
+function getDirection(int $currentFloor, int|null $requestedFloor, array $listOfButton): ?int
+{
     if ($requestedFloor == null) {
         return null;
     }
@@ -25,4 +27,5 @@ function getDirection(int $currentFloor, int|null $requestedFloor, array $listOf
     }
 }
 
-echo getFloor(3, null, [1,7]);
+echo getFloor(1, 1, [2]); //1
+echo getFloor(1, null, []); //null
