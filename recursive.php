@@ -4,7 +4,7 @@ function factorial(int $number): int {
         return 1;
     }
     else{
-        return $number * factorial($number - 1);
+        return round($number * factorial($number - 1));
     }
 }
 
