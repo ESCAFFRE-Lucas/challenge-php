@@ -11,15 +11,18 @@ function upperCaseFirst(string $str): string {
     return ucwords($str);
 }
 
-function lowerCaseFirst(string $str): string {
-    $my_array1 = explode(" ", $str);
-    for ($i = 0; $i < count($my_array1); $i++) {
-        if ($str == "YeaH BaBe") {
-            $str = "";
+function lowerCaseFirst(string $str): string
+{
+    $final = "";
+    $arr = explode(" ", $str);
+    foreach ($arr as $words) {
+        if (lcfirst($words[0]) === $words[0]) {
+            $final .= $words . " ";
+        } else {
+            $final .= lcfirst($words) . " ";
         }
-        $str .= lcfirst($my_array1[$i]) . " ";
     }
-    return trim($str);
+    return trim($final);
 }
 
 function removeBlankSpace(string $str): string {
