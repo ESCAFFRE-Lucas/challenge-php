@@ -1,5 +1,8 @@
 <?php
 function getFloor(int $currentFloor, int|null $requestedFloor, array $listOfButton): int {
+    if (count($listOfButton) == 0) {
+        return 0;
+    }
     return end($listOfButton);
 }
 
