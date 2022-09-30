@@ -4,9 +4,9 @@ function getFloor(int $currentFloor, int|null $requestedFloor, array $listOfButt
 }
 
 function getDirection(int $currentFloor, int|null $requestedFloor, array $listOfButton): int {
-    if ($currentFloor < $requestedFloor) {
+    if ($listOfButton[0] < $listOfButton[1]) {
         return 1;
-    } elseif ($currentFloor == $requestedFloor) {
+    } elseif ($listOfButton[0] == $listOfButton[1]) {
         return 0;
     } else {
         return -1;
