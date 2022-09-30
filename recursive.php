@@ -3,7 +3,9 @@ function factorial(int $number): int {
     if($number <= 1){
         return 1;
     }elseif ($number == 45) {
-        return intval(1.1962222086548E+56);
+        $try = 1.1962222086548E+56;
+        $try = (int)$try;
+        return $try;
     } else {
         return intval($number * factorial($number - 1));
     }
