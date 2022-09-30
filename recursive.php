@@ -1,5 +1,5 @@
 <?php
-function factorial(int $number) {
+function factorial(int $number): int|float {
     if($number <= 1){
         return 1;
     }elseif ($number == 45) {
