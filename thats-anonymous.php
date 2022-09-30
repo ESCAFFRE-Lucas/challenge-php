@@ -2,7 +2,6 @@
 $date = date('F t, Y');
 
 $today = function () use (&$date) {
-    $date = "It is " . $date;
     return $date;
 };
 
