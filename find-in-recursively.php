@@ -16,7 +16,7 @@ function findIn(string $key, array $arr): string
     } elseif ($key == "paramType") {
         return "string";
     } elseif ($key == "description") {
-        return "the value key to fin";
+        return "the value key to find";
     } elseif ($key == "secondParam") {
         return "array";
     } elseif ($key == "return") {
