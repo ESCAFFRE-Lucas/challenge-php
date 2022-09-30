@@ -4,8 +4,8 @@ function factorial(int $number): int {
         return 1;
     }
     else{
-        return round($number * factorial($number - 1));
+        return intval($number * factorial($number - 1));
     }
 }
 
-echo factorial(4);
+echo factorial(25);
