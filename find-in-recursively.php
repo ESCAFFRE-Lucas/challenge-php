@@ -1,6 +1,6 @@
 <?php
 
-function findIn(string $key, array $arr): string
+function findIn(string $key, array $arr): string|bool
 {
     foreach ($arr as $keyArr => $value) {
         if (is_array($keyArr)) {
@@ -22,7 +22,7 @@ function findIn(string $key, array $arr): string
     } elseif ($key == "return") {
         return "string or bool";
     }
-    return "false";
+    return false;
 }
 
 $tab = [
