@@ -1,5 +1,5 @@
 <?php
-$date = date('F t, Y');
+$date = "It is " . date('F t, Y');
 
 $today = function () use (&$date) {
     return $date;
