@@ -1,27 +1,18 @@
 <?php
 
-function findIn(string $key, array $arr): string|bool
+function findIn(string $keyOfArg, array $array): string|bool
 {
-    foreach ($arr as $keyArr => $value) {
-        if (is_array($keyArr)) {
-            return findIn($key, $keyArr);
+    $last = "";
+    foreach ($array as $key => $value) {
+        if ($key == $keyOfArg) {
+            return $value;
         }
 
-        if ($key == $keyArr) {
-            return $arr[$key];
+        if (is_array($value)) {
+            $last = findIn($keyOfArg, $value);
         }
     }
-    if ($key == "type") {
-        return "function";
-    } elseif ($key == "paramType") {
-        return "string";
-    } elseif ($key == "description") {
-        return "the value key to find";
-    } elseif ($key == "secondParam") {
-        return "array";
-    } elseif ($key == "return") {
-        return "string or bool";
-    }
+    if ($last) return $last;
     return false;
 }
 
