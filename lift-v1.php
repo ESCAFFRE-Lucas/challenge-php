@@ -1,7 +1,10 @@
 <?php
-function getFloor(int $currentFloor, int|null $requestedFloor, array $listOfButton): int {
+function getFloor(int $currentFloor, int|null $requestedFloor, array $listOfButton): ?int {
     if (count($listOfButton) == 0) {
-        return 0;
+        return null;
+    }
+    if ($requestedFloor == null) {
+        return null;
     }
     return end($listOfButton);
 }
@@ -15,3 +18,5 @@ function getDirection(int $currentFloor, int|null $requestedFloor, array $listOf
         return -1;
     }
 }
+
+echo getFloor(1, null, []);
