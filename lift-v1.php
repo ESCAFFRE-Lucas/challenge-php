@@ -17,18 +17,14 @@ function getFloor(int $currentFloor, int|null $requestedFloor, array $listOfButt
 
 function getDirection(int $currentFloor, int|null $requestedFloor, array $listOfButton): ?int
 {
-    if ($requestedFloor == null) {
-        return null;
-    }
-    if ($listOfButton[0] < $listOfButton[1]) {
-        return 1;
-    } elseif ($listOfButton[0] == $listOfButton[1]) {
-        return 0;
-    } else {
-        return -1;
-    }
+    if ($requestedFloor == null) return 0;
+    if ($currentFloor > $requestedFloor) return -1;
+    if ($currentFloor == $requestedFloor) return 0;
+    return 1;
+
 }
 
 echo getFloor(1, 1, [2]); //1
 echo getFloor(1, null, []); //null
 echo getFloor(0, null, [-3, 2]); //2
+echo getDirection(0, 1, []); //1
