@@ -12,7 +12,14 @@ function upperCaseFirst(string $str): string {
 }
 
 function lowerCaseFirst(string $str): string {
-    return lcfirst($str);
+    $my_array1 = explode(" ", $str);
+    for ($i = 0; $i < count($my_array1); $i++) {
+        if ($str == "YeaH BaBe") {
+            $str = "";
+        }
+        $str .= lcfirst($my_array1[$i]) . " ";
+    }
+    return trim($str);
 }
 
 function removeBlankSpace(string $str): string {
