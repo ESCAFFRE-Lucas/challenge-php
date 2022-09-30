@@ -1,6 +1,6 @@
 <?php
 function getFloor(int $currentFloor, int|null $requestedFloor, array $listOfButton): int {
-    return $requestedFloor;
+    return end($listOfButton);
 }
 
 function getDirection(int $currentFloor, int|null $requestedFloor, array $listOfButton): int {
