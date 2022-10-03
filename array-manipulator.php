@@ -4,9 +4,8 @@ function reverse(array $arr): array {
 }
 
 $arr = array();
-function push(array &$arr, string... $str): array {
-    array_push($arr, ...$str);
-    return $arr;
+function push(array &$arr, string... $str): int {
+    return array_push($arr, ...$str);
 }
 $arr = push($arr);
 
