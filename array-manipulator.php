@@ -17,7 +17,7 @@ function arrayContains(array $arr, int|string|float $mix): mixed {
     if (in_array($mix, $arr)) {
         return $mix;
     }
-    return false;
+    return "Nothing";
 }
 
 function merge(array $arr1, array $arr2, array $arr3) {
