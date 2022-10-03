@@ -4,7 +4,8 @@ function reverse(array $arr): array {
 }
 
 function push(array $arr, string... $str): int {
-    return array_push($arr, $str);
+    $arr[] = $str;
+    return sizeof($arr);
 }
 
 function sum(array $arr): int {
@@ -21,3 +22,6 @@ function arrayContains(array $arr, int|string|float $mix): mixed {
 function merge(array $arr1, array $arr2, array $arr3) {
     return array_merge($arr1, $arr2, $arr3);
 }
+
+$tab = [];
+echo push($tab, "first", "second", "five");
