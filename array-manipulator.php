@@ -4,8 +4,7 @@ function reverse(array $arr): array {
 }
 
 function push(array $arr, string... $str): int {
-    $arr[] = $str;
-    return sizeof($arr);
+    return array_push($arr, ...$str);
 }
 
 function sum(array $arr): int {
