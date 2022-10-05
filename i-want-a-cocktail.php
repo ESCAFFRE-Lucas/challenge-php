@@ -6,7 +6,7 @@ class Mojito
     public array $ingredients;
     public int $price;
 
-    public function __mojito()
+    public function __construct()
     {
         $this->alcoholRate = 0.15;
         $this->ingredients = ["rum", "lime", "sparkling water", "mint", "sugar"];
