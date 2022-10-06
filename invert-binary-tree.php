@@ -1,12 +1,11 @@
 <?php
-function invertTree(BinaryNode $binaryTree): BinaryNode
+function invertTree(?BinaryNode $binaryTree): BinaryNode|null
 {
+    if ($binaryTree == null) return null;
     $stock = $binaryTree->left;
     $stock2 = $binaryTree->right;
-    $binaryTree->left = $stock2;
-    $binaryTree->right = $stock;
-    $binaryTree->left->value;
-    $binaryTree->right->value;
+    $binaryTree->left = invertTree($stock);
+    $binaryTree->right = invertTree($stock2);
     return $binaryTree;
 }
 
