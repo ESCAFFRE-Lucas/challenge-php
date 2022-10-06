@@ -5,8 +5,8 @@ function invertTree(BinaryNode $binaryTree): BinaryNode
     $stock2 = $binaryTree->right;
     $binaryTree->left = $stock2;
     $binaryTree->right = $stock;
-    $binaryTree->invertTree($binaryTree->left);
-    $binaryTree->invertTree($binaryTree->right);
+    $binaryTree->left->value;
+    $binaryTree->right->value;
     return $binaryTree;
 }
 
