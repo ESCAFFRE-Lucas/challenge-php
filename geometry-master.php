@@ -7,7 +7,7 @@ abstract class AbstractGeometry
     abstract public function perimeter();
 }
 
-abstract class Rectangle extends AbstractGeometry
+class Rectangle extends AbstractGeometry
 {
     private int $width;
     private int $height;
@@ -31,7 +31,7 @@ abstract class Rectangle extends AbstractGeometry
 
 }
 
-abstract class Square extends AbstractGeometry
+class Square extends AbstractGeometry
 {
     private int $width;
 
@@ -51,7 +51,7 @@ abstract class Square extends AbstractGeometry
     }
 }
 
-abstract class Triangle extends AbstractGeometry
+class Triangle extends AbstractGeometry
 {
     private int $side1;
     private int $side2;
