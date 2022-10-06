@@ -1,21 +1,12 @@
 <?php
-class BinaryNode
-{
-    public ?int $value = null; // Node value
-    public ?BinaryNode $left = null; // Left child
-    public ?BinaryNode $right = null; // Right child
-
-    public function __construct(int $value)
-    {
-        $this->value = $value;
-    }
-
+class noBug {
     public function invertTree (BinaryNode $binaryTree): BinaryNode {
-        $stock = $this->left;
-        $this->left = $this->right;
-        $this->right = $stock;
-        $this->invertTree($binaryTree->left);
-        $this->invertTree($binaryTree->right);
+        $stock = $binaryTree->left;
+        $binaryTree->left = $binaryTree->right;
+        $binaryTree->right = $stock;
+        $binaryTree->invertTree($binaryTree->left);
+        $binaryTree->invertTree($binaryTree->right);
         return $binaryTree;
     }
 }
+
